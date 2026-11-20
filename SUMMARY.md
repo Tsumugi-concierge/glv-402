@@ -41,3 +41,25 @@ Validation checklist
 - Selected language persists across reloads and navigation.
 - First visit defaults to the browser language if supported, else English.
 - No page URLs changed.
+
+---
+
+Merge Conflict Resolution and Release Notes (2026-11-21)
+
+What I did
+1. Brought main into feat/i18n-6lang and resolved the single conflict in index.html.
+2. Resolution policy followed: kept the branch’s 6-language implementation and the removal of embedded chat; preserved main-side non-chat content.
+
+How the conflict was resolved (index.html)
+- Kept the multilingual <p id="hostContact"> with per-language spans from the branch.
+- Dropped main’s added JS objects/functions (HOST_CONTACT, COPIED_TEXT, applyTranslations, setLang) and the change to pass a string to showToast; retained the branch’s i18n via assets/i18n.js and the existing toast text nodes.
+- Ensured no other main-side content was lost; the address and other content were already present in the branch’s localized markup.
+
+Verification after merge
+- Language switcher presence: confirmed across all 13 HTML pages (root uses .lang-switcher; inner pages use .lang-bar).
+- Prohibited codes: searched for key numbers/lock codes/keybox codes and related terms in all pages. None present. The how-to-open page only states that such information will be sent separately after guest registration (no actual codes included).
+
+PR and deployment
+- Pushed the conflict resolution commit to feat/i18n-6lang and verified PR #1 became mergeable.
+- Merged PR #1 (6-language i18n rollout) into main via GitHub CLI.
+- GitHub Pages: Verified that the published site displays the language switcher on the home page and an inner page (how-to-open). Note: content rendering in a plain text fetch does not reflect CSS/JS behavior, but the switcher is present and visible; the site appears updated.
