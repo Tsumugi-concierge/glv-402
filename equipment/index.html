@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,157 +28,53 @@
   .back-footer a:hover{opacity:.8}
 </style>
   <link rel="stylesheet" href="../assets/cute-pack.css">
+  <link rel="stylesheet" href="../assets/i18n.css">
+  <script src="../assets/i18n.js"></script>
 </head>
 <body>
-<div class="lang-bar">
-  <button class="lang-btn active" onclick="setLang('en',this)">&#x1F1EC;&#x1F1E7; EN</button>
-  <button class="lang-btn" onclick="setLang('ja',this)">&#x1F1EF;&#x1F1F5; JA</button>
-  <button class="lang-btn" onclick="setLang('zh',this)">&#x1F1E8;&#x1F1F3; ZH</button>
-  <button class="lang-btn" onclick="setLang('ko',this)">&#x1F1F0;&#x1F1F7; KO</button>
-  <button class="lang-btn" onclick="setLang('fr',this)">&#x1F1EB;&#x1F1F7; FR</button>
-  <button class="lang-btn" onclick="setLang('es',this)">&#x1F1EA;&#x1F1F8; ES</button>
+<div class="lang-bar" aria-label="Language">
+  <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+  <button type="button" class="lang-btn" data-lang="ja" aria-pressed="false">日本語</button>
+  <button type="button" class="lang-btn" data-lang="zh" aria-pressed="false">中文</button>
+  <button type="button" class="lang-btn" data-lang="ko" aria-pressed="false">한국어</button>
+  <button type="button" class="lang-btn" data-lang="fr" aria-pressed="false">Français</button>
+  <button type="button" class="lang-btn" data-lang="es" aria-pressed="false">Español</button>
 </div>
-<div class="top-bar">
-  <a href="../" class="back-btn">&#x2190;</a>
-  <span class="top-emoji">🏠</span>
-  <div class="top-title">Equipment</div>
-</div>
+  <div class="top-bar">
+    <a href="../" class="back-btn">&#x2190;</a>
+    <span class="top-emoji">🏠</span>
+    <div class="top-title" data-i18n="pageTitle"><span class="lang lang-en">Equipment</span><span class="lang lang-ja">設備について</span><span class="lang lang-zh">设施说明</span><span class="lang lang-ko">시설 안내</span><span class="lang lang-fr">Équipements</span><span class="lang lang-es">Equipamiento</span></div>
+  </div>
 <div class="content">
-  <div class="section-title" data-i18n="s1"></div>
+  <div class="section-title" data-i18n="s1"><span class="lang lang-en">Air Conditioner</span><span class="lang lang-ja">エアコン</span><span class="lang lang-zh">空调</span><span class="lang lang-ko">에어컨</span><span class="lang lang-fr">Climatiseur</span><span class="lang lang-es">Aire acondicionado</span></div>
   <img src="../assets/guide/equipment-ac.png" class="page-img" alt="Air conditioner guide">
-  <div class="info-card"><p data-i18n="eq1"></p></div>
+  <div class="info-card"><p data-i18n="eq1"><span class="lang lang-en">Use the COOL or HEAT button to start the A/C. Adjust the temperature and air volume with the buttons shown in the guide image.</span><span class="lang lang-ja">COOL または HEAT ボタンでエアコンを起動します。温度や風量は画像内のボタンで調整してください。</span><span class="lang lang-zh">按 COOL 或 HEAT 启动空调。温度和风量请按图片中的按钮调节。</span><span class="lang lang-ko">COOL 또는 HEAT 버튼으로 에어컨을 켜고, 온도와 풍량은 이미지의 버튼으로 조절하세요.</span><span class="lang lang-fr">Appuyez sur COOL ou HEAT pour démarrer la climatisation. Réglez la température et la ventilation avec les boutons indiqués.</span><span class="lang lang-es">Pulse COOL o HEAT para encender el aire acondicionado. Ajuste la temperatura y el caudal de aire con los botones de la imagen.</span></p></div>
 
-  <div class="section-title" data-i18n="s2"></div>
+  <div class="section-title" data-i18n="s2"><span class="lang lang-en">TV</span><span class="lang lang-ja">テレビ</span><span class="lang lang-zh">电视</span><span class="lang lang-ko">TV</span><span class="lang lang-fr">Télévision</span><span class="lang lang-es">Televisión</span></div>
   <img src="../assets/guide/equipment-tv.png" class="page-img" alt="TV guide">
-  <div class="info-card"><p data-i18n="eq2"></p></div>
+  <div class="info-card"><p data-i18n="eq2"><span class="lang lang-en">Use ON/OFF to power the TV and HOME MENU to open the smart TV screen.</span><span class="lang lang-ja">ON/OFF で電源を入れ、HOME MENU からスマートTV画面を開けます。</span><span class="lang lang-zh">按 ON/OFF 开机，按 HOME MENU 打开智能电视界面。</span><span class="lang lang-ko">ON/OFF 로 전원을 켜고 HOME MENU 로 스마트 TV 화면을 여세요.</span><span class="lang lang-fr">Utilisez ON/OFF pour allumer la TV et HOME MENU pour ouvrir l'écran Smart TV.</span><span class="lang lang-es">Use ON/OFF para encender la TV y HOME MENU para abrir la pantalla Smart TV.</span></p></div>
 
-  <div class="section-title" data-i18n="s3"></div>
+  <div class="section-title" data-i18n="s3"><span class="lang lang-en">Bidet</span><span class="lang lang-ja">ウォシュレット</span><span class="lang lang-zh">智能马桶</span><span class="lang lang-ko">비데</span><span class="lang lang-fr">Bidet</span><span class="lang lang-es">Bidé</span></div>
   <img src="../assets/guide/equipment-bidet.png" class="page-img" alt="Bidet guide">
-  <div class="info-card"><p data-i18n="eq3"></p></div>
+  <div class="info-card"><p data-i18n="eq3"><span class="lang lang-en">Use the front or rear wash buttons as needed, and press STOP to finish.</span><span class="lang lang-ja">必要に応じて前洗浄・後洗浄ボタンを使い、終わるときは STOP を押してください。</span><span class="lang lang-zh">可按需使用前洗或后洗按钮，结束时请按 STOP。</span><span class="lang lang-ko">필요에 따라 앞/뒤 세정 버튼을 사용하고 종료할 때는 STOP 을 누르세요.</span><span class="lang lang-fr">Utilisez le lavage avant ou arrière si besoin, puis appuyez sur STOP pour terminer.</span><span class="lang lang-es">Use los botones de lavado delantero o trasero según sea necesario y pulse STOP para terminar.</span></p></div>
 
-  <div class="section-title" data-i18n="s4"></div>
+  <div class="section-title" data-i18n="s4"><span class="lang lang-en">Water Heater</span><span class="lang lang-ja">給湯器</span><span class="lang lang-zh">热水器</span><span class="lang lang-ko">온수기</span><span class="lang lang-fr">Chauffe-eau</span><span class="lang lang-es">Calentador de agua</span></div>
   <img src="../assets/guide/equipment-water-heater.png" class="page-img" alt="Water heater guide">
-  <div class="info-card"><p data-i18n="eq4"></p></div>
+  <div class="info-card"><p data-i18n="eq4"><span class="lang lang-en">Press the ON/OFF button before using hot water, then adjust the temperature with the upper and lower buttons.</span><span class="lang lang-ja">お湯を使う前に ON/OFF を押し、その後上下ボタンで温度を調整してください。</span><span class="lang lang-zh">使用热水前请先按 ON/OFF，然后用上下按钮调节温度。</span><span class="lang lang-ko">온수를 사용하기 전에 ON/OFF 를 누르고 위아래 버튼으로 온도를 조절하세요.</span><span class="lang lang-fr">Avant d'utiliser l'eau chaude, appuyez sur ON/OFF puis réglez la température avec les boutons haut et bas.</span><span class="lang lang-es">Antes de usar agua caliente, pulse ON/OFF y ajuste la temperatura con los botones superior e inferior.</span></p></div>
 
-  <div class="section-title" data-i18n="s5"></div>
+  <div class="section-title" data-i18n="s5"><span class="lang lang-en">Microwave</span><span class="lang lang-ja">電子レンジ</span><span class="lang lang-zh">微波炉</span><span class="lang lang-ko">전자레인지</span><span class="lang lang-fr">Micro-ondes</span><span class="lang lang-es">Microondas</span></div>
   <img src="../assets/guide/equipment-microwave.png" class="page-img" alt="Microwave guide">
-  <div class="info-card"><p data-i18n="eq5"></p></div>
+  <div class="info-card"><p data-i18n="eq5"><span class="lang lang-en">Set the power level with the upper dial, then set the cooking time with the lower dial.</span><span class="lang lang-ja">上のダイヤルで出力を選び、下のダイヤルで加熱時間を設定してください。</span><span class="lang lang-zh">先用上方旋钮选择火力，再用下方旋钮设定加热时间。</span><span class="lang lang-ko">위 다이얼로 출력 단계를 고르고 아래 다이얼로 시간을 설정하세요.</span><span class="lang lang-fr">Réglez la puissance avec la molette du haut puis le temps avec la molette du bas.</span><span class="lang lang-es">Use el dial superior para elegir la potencia y el inferior para fijar el tiempo.</span></p></div>
 
-  <div class="section-title" data-i18n="s6"></div>
+  <div class="section-title" data-i18n="s6"><span class="lang lang-en">Toaster Oven</span><span class="lang lang-ja">トースターオーブン</span><span class="lang lang-zh">烤箱</span><span class="lang lang-ko">토스터 오븐</span><span class="lang lang-fr">Four grille-pain</span><span class="lang lang-es">Horno tostador</span></div>
   <img src="../assets/guide/equipment-toaster.png" class="page-img" alt="Toaster oven guide">
-  <div class="info-card"><p data-i18n="eq6"></p></div>
+  <div class="info-card"><p data-i18n="eq6"><span class="lang lang-en">Place the food inside and turn the timer dial. The toaster oven starts automatically.</span><span class="lang lang-ja">食べ物を入れてタイマーダイヤルを回すと、自動で加熱が始まります。</span><span class="lang lang-zh">放入食物后旋转定时旋钮，烤箱会自动开始工作。</span><span class="lang lang-ko">음식을 넣고 타이머 다이얼을 돌리면 자동으로 작동합니다.</span><span class="lang lang-fr">Placez les aliments dans le four puis tournez la minuterie. Le four démarre automatiquement.</span><span class="lang lang-es">Coloque la comida dentro y gire el temporizador. El horno se iniciará automáticamente.</span></p></div>
 
   <div class="back-footer">
-    <a href="../" data-i18n="backToMenu">&#x2190; Back to Menu</a>
+    <a href="../" data-i18n="backToMenu"><span class="lang lang-en">← Back to Menu</span><span class="lang lang-ja">← メニューに戻る</span><span class="lang lang-zh">← 返回菜单</span><span class="lang lang-ko">← 메뉴로 돌아가기</span><span class="lang lang-fr">← Retour au menu</span><span class="lang lang-es">← Volver al menú</span></a>
   </div>
 </div>
-<script>
-const S = {
-  en: {
-    backToMenu: "← Back to Menu",
-    s1: "Air Conditioner",
-    s2: "TV",
-    s3: "Bidet",
-    s4: "Water Heater",
-    s5: "Microwave",
-    s6: "Toaster Oven",
-    eq1: "Use the COOL or HEAT button to start the A/C. Adjust the temperature and air volume with the buttons shown in the guide image.",
-    eq2: "Use ON/OFF to power the TV and HOME MENU to open the smart TV screen.",
-    eq3: "Use the front or rear wash buttons as needed, and press STOP to finish.",
-    eq4: "Press the ON/OFF button before using hot water, then adjust the temperature with the upper and lower buttons.",
-    eq5: "Set the power level with the upper dial, then set the cooking time with the lower dial.",
-    eq6: "Place the food inside and turn the timer dial. The toaster oven starts automatically."
-  },
-  ja: {
-    backToMenu: "← メニューに戻る",
-    s1: "エアコン",
-    s2: "テレビ",
-    s3: "ウォシュレット",
-    s4: "給湯器",
-    s5: "電子レンジ",
-    s6: "トースターオーブン",
-    eq1: "COOL または HEAT ボタンでエアコンを起動します。温度や風量は画像内のボタンで調整してください。",
-    eq2: "ON/OFF で電源を入れ、HOME MENU からスマートTV画面を開けます。",
-    eq3: "必要に応じて前洗浄・後洗浄ボタンを使い、終わるときは STOP を押してください。",
-    eq4: "お湯を使う前に ON/OFF を押し、その後上下ボタンで温度を調整してください。",
-    eq5: "上のダイヤルで出力を選び、下のダイヤルで加熱時間を設定してください。",
-    eq6: "食べ物を入れてタイマーダイヤルを回すと、自動で加熱が始まります。"
-  },
-  zh: {
-    backToMenu: "← 返回菜单",
-    s1: "空调",
-    s2: "电视",
-    s3: "智能马桶",
-    s4: "热水器",
-    s5: "微波炉",
-    s6: "烤箱",
-    eq1: "按 COOL 或 HEAT 启动空调。温度和风量请按图片中的按钮调节。",
-    eq2: "按 ON/OFF 开机，按 HOME MENU 打开智能电视界面。",
-    eq3: "可按需使用前洗或后洗按钮，结束时请按 STOP。",
-    eq4: "使用热水前请先按 ON/OFF，然后用上下按钮调节温度。",
-    eq5: "先用上方旋钮选择火力，再用下方旋钮设定加热时间。",
-    eq6: "放入食物后旋转定时旋钮，烤箱会自动开始工作。"
-  },
-  ko: {
-    backToMenu: "← 메뉴로 돌아가기",
-    s1: "에어컨",
-    s2: "TV",
-    s3: "비데",
-    s4: "온수기",
-    s5: "전자레인지",
-    s6: "토스터 오븐",
-    eq1: "COOL 또는 HEAT 버튼으로 에어컨을 켜고, 온도와 풍량은 이미지의 버튼으로 조절하세요.",
-    eq2: "ON/OFF 로 전원을 켜고 HOME MENU 로 스마트 TV 화면을 여세요.",
-    eq3: "필요에 따라 앞/뒤 세정 버튼을 사용하고 종료할 때는 STOP 을 누르세요.",
-    eq4: "온수를 사용하기 전에 ON/OFF 를 누르고 위아래 버튼으로 온도를 조절하세요.",
-    eq5: "위 다이얼로 출력 단계를 고르고 아래 다이얼로 시간을 설정하세요.",
-    eq6: "음식을 넣고 타이머 다이얼을 돌리면 자동으로 작동합니다."
-  },
-  fr: {
-    backToMenu: "← Retour au menu",
-    s1: "Climatiseur",
-    s2: "Télévision",
-    s3: "Bidet",
-    s4: "Chauffe-eau",
-    s5: "Micro-ondes",
-    s6: "Four grille-pain",
-    eq1: "Appuyez sur COOL ou HEAT pour démarrer la climatisation. Réglez la température et la ventilation avec les boutons indiqués.",
-    eq2: "Utilisez ON/OFF pour allumer la TV et HOME MENU pour ouvrir l'écran Smart TV.",
-    eq3: "Utilisez le lavage avant ou arrière si besoin, puis appuyez sur STOP pour terminer.",
-    eq4: "Avant d'utiliser l'eau chaude, appuyez sur ON/OFF puis réglez la température avec les boutons haut et bas.",
-    eq5: "Réglez la puissance avec la molette du haut puis le temps avec la molette du bas.",
-    eq6: "Placez les aliments dans le four puis tournez la minuterie. Le four démarre automatiquement."
-  },
-  es: {
-    backToMenu: "← Volver al menú",
-    s1: "Aire acondicionado",
-    s2: "Televisión",
-    s3: "Bidé",
-    s4: "Calentador de agua",
-    s5: "Microondas",
-    s6: "Horno tostador",
-    eq1: "Pulse COOL o HEAT para encender el aire acondicionado. Ajuste la temperatura y el caudal de aire con los botones de la imagen.",
-    eq2: "Use ON/OFF para encender la TV y HOME MENU para abrir la pantalla Smart TV.",
-    eq3: "Use los botones de lavado delantero o trasero según sea necesario y pulse STOP para terminar.",
-    eq4: "Antes de usar agua caliente, pulse ON/OFF y ajuste la temperatura con los botones superior e inferior.",
-    eq5: "Use el dial superior para elegir la potencia y el inferior para fijar el tiempo.",
-    eq6: "Coloque la comida dentro y gire el temporizador. El horno se iniciará automáticamente."
-  }
-};
 
-function setLang(lang, btn) {
-  document.querySelectorAll(".lang-btn").forEach((b) => b.classList.remove("active"));
-  btn.classList.add("active");
-  const dict = S[lang];
-  if (!dict) return;
-  document.querySelectorAll("[data-i18n]").forEach((el) => {
-    const key = el.getAttribute("data-i18n");
-    if (key in dict) el.textContent = dict[key];
-  });
-}
-
-setLang("en", document.querySelector(".lang-btn.active"));
-</script>
   <script src="../assets/cute-pack.js" defer></script>
 </body>
 </html>

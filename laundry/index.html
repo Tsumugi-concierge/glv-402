@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,99 +29,37 @@
   .back-footer a:hover{opacity:.8}
 </style>
   <link rel="stylesheet" href="../assets/cute-pack.css">
+  <link rel="stylesheet" href="../assets/i18n.css">
+  <script src="../assets/i18n.js"></script>
 </head>
 <body>
-<div class="lang-bar">
-  <button class="lang-btn active" onclick="setLang('en',this)">&#x1F1EC;&#x1F1E7; EN</button>
-  <button class="lang-btn" onclick="setLang('ja',this)">&#x1F1EF;&#x1F1F5; JA</button>
-  <button class="lang-btn" onclick="setLang('zh',this)">&#x1F1E8;&#x1F1F3; ZH</button>
-  <button class="lang-btn" onclick="setLang('ko',this)">&#x1F1F0;&#x1F1F7; KO</button>
-  <button class="lang-btn" onclick="setLang('fr',this)">&#x1F1EB;&#x1F1F7; FR</button>
-  <button class="lang-btn" onclick="setLang('es',this)">&#x1F1EA;&#x1F1F8; ES</button>
+<div class="lang-bar" aria-label="Language">
+  <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+  <button type="button" class="lang-btn" data-lang="ja" aria-pressed="false">日本語</button>
+  <button type="button" class="lang-btn" data-lang="zh" aria-pressed="false">中文</button>
+  <button type="button" class="lang-btn" data-lang="ko" aria-pressed="false">한국어</button>
+  <button type="button" class="lang-btn" data-lang="fr" aria-pressed="false">Français</button>
+  <button type="button" class="lang-btn" data-lang="es" aria-pressed="false">Español</button>
 </div>
-<div class="top-bar">
-  <a href="../" class="back-btn">&#x2190;</a>
-  <span class="top-emoji">🧺</span>
-  <div class="top-title">Laundry</div>
-</div>
+  <div class="top-bar">
+    <a href="../" class="back-btn">&#x2190;</a>
+    <span class="top-emoji">🧺</span>
+    <div class="top-title" data-i18n="pageTitle"><span class="lang lang-en">Laundry</span><span class="lang lang-ja">洗濯機の使い方</span><span class="lang lang-zh">洗衣指南</span><span class="lang lang-ko">세탁기 사용법</span><span class="lang lang-fr">Blanchisserie</span><span class="lang lang-es">Lavandería</span></div>
+  </div>
 <div class="content">
-  <div class="section-title" data-i18n="s1"></div>
+  <div class="section-title" data-i18n="s1"><span class="lang lang-en">Washing Machine</span><span class="lang lang-ja">洗濯機</span><span class="lang lang-zh">洗衣机</span><span class="lang lang-ko">세탁기</span><span class="lang lang-fr">Lave-linge</span><span class="lang lang-es">Lavadora</span></div>
   <img src="../assets/guide/laundry-washer.png" class="page-img" alt="Washing machine guide">
-  <div class="info-card"><p data-i18n="lw1"></p></div>
+  <div class="info-card"><p data-i18n="lw1"><span class="lang lang-en">Detergent goes in the back compartment and fabric softener goes in the front compartment. After selecting the course, press START/PAUSE.</span><span class="lang lang-ja">洗剤は奥、柔軟剤は手前の投入口に入れてください。コースを選んだあと START/PAUSE を押します。</span><span class="lang lang-zh">洗涤剂放后侧，柔顺剂放前侧。选择程序后按 START/PAUSE。</span><span class="lang lang-ko">세제는 안쪽, 섬유유연제는 앞쪽 투입구에 넣고 코스를 고른 뒤 START/PAUSE 를 누르세요.</span><span class="lang lang-fr">Mettez la lessive dans le compartiment du fond et l'assouplissant dans le compartiment avant. Après avoir choisi le programme, appuyez sur START/PAUSE.</span><span class="lang lang-es">Ponga el detergente en el compartimento trasero y el suavizante en el compartimento delantero. Después de elegir el programa, pulse START/PAUSE.</span></p></div>
 
-  <div class="section-title" data-i18n="s2"></div>
+  <div class="section-title" data-i18n="s2"><span class="lang lang-en">Clothes Dryer</span><span class="lang lang-ja">衣類乾燥機</span><span class="lang lang-zh">烘干机</span><span class="lang lang-ko">의류 건조기</span><span class="lang lang-fr">Sèche-linge</span><span class="lang lang-es">Secadora</span></div>
   <img src="../assets/guide/laundry-dryer.png" class="page-img" alt="Clothes dryer guide">
-  <div class="info-card"><p data-i18n="lw2"></p><p data-i18n="lw3"></p></div>
+  <div class="info-card"><p data-i18n="lw2"><span class="lang lang-en">Turn the dryer on with POWER, then choose AUTO for the recommended setting.</span><span class="lang lang-ja">POWER で電源を入れ、基本的には AUTO を選ぶのがおすすめです。</span><span class="lang lang-zh">按 POWER 开机，通常建议选择 AUTO 模式。</span><span class="lang lang-ko">POWER 로 전원을 켠 뒤 기본적으로 AUTO 모드를 추천합니다.</span><span class="lang lang-fr">Allumez avec POWER puis choisissez AUTO, le mode recommandé.</span><span class="lang lang-es">Encienda con POWER y normalmente use AUTO, que es el ajuste recomendado.</span></p><p data-i18n="lw3"><span class="lang lang-en">Press START to begin drying. After the cycle ends, remove the clothes once the machine unlocks.</span><span class="lang lang-ja">START を押すと乾燥が始まります。終了後、ロック解除を確認してから洗濯物を取り出してください。</span><span class="lang lang-zh">按 START 开始烘干。程序结束并解锁后再取出衣物。</span><span class="lang lang-ko">START 를 누르면 건조가 시작됩니다. 종료 후 잠금이 풀리면 옷을 꺼내세요.</span><span class="lang lang-fr">Appuyez sur START pour lancer le séchage. Retirez le linge après la fin du cycle et le déverrouillage.</span><span class="lang lang-es">Pulse START para comenzar el secado. Saque la ropa cuando termine el ciclo y se desbloquee la máquina.</span></p></div>
 
   <div class="back-footer">
-    <a href="../" data-i18n="backToMenu">&#x2190; Back to Menu</a>
+    <a href="../" data-i18n="backToMenu"><span class="lang lang-en">← Back to Menu</span><span class="lang lang-ja">← メニューに戻る</span><span class="lang lang-zh">← 返回菜单</span><span class="lang lang-ko">← 메뉴로 돌아가기</span><span class="lang lang-fr">← Retour au menu</span><span class="lang lang-es">← Volver al menú</span></a>
   </div>
 </div>
-<script>
-const S = {
-  en: {
-    backToMenu: "← Back to Menu",
-    s1: "Washing Machine",
-    s2: "Clothes Dryer",
-    lw1: "Detergent goes in the back compartment and fabric softener goes in the front compartment. After selecting the course, press START/PAUSE.",
-    lw2: "Turn the dryer on with POWER, then choose AUTO for the recommended setting.",
-    lw3: "Press START to begin drying. After the cycle ends, remove the clothes once the machine unlocks."
-  },
-  ja: {
-    backToMenu: "← メニューに戻る",
-    s1: "洗濯機",
-    s2: "衣類乾燥機",
-    lw1: "洗剤は奥、柔軟剤は手前の投入口に入れてください。コースを選んだあと START/PAUSE を押します。",
-    lw2: "POWER で電源を入れ、基本的には AUTO を選ぶのがおすすめです。",
-    lw3: "START を押すと乾燥が始まります。終了後、ロック解除を確認してから洗濯物を取り出してください。"
-  },
-  zh: {
-    backToMenu: "← 返回菜单",
-    s1: "洗衣机",
-    s2: "烘干机",
-    lw1: "洗涤剂放后侧，柔顺剂放前侧。选择程序后按 START/PAUSE。",
-    lw2: "按 POWER 开机，通常建议选择 AUTO 模式。",
-    lw3: "按 START 开始烘干。程序结束并解锁后再取出衣物。"
-  },
-  ko: {
-    backToMenu: "← 메뉴로 돌아가기",
-    s1: "세탁기",
-    s2: "의류 건조기",
-    lw1: "세제는 안쪽, 섬유유연제는 앞쪽 투입구에 넣고 코스를 고른 뒤 START/PAUSE 를 누르세요.",
-    lw2: "POWER 로 전원을 켠 뒤 기본적으로 AUTO 모드를 추천합니다.",
-    lw3: "START 를 누르면 건조가 시작됩니다. 종료 후 잠금이 풀리면 옷을 꺼내세요."
-  },
-  fr: {
-    backToMenu: "← Retour au menu",
-    s1: "Lave-linge",
-    s2: "Sèche-linge",
-    lw1: "Mettez la lessive dans le compartiment du fond et l'assouplissant dans le compartiment avant. Après avoir choisi le programme, appuyez sur START/PAUSE.",
-    lw2: "Allumez avec POWER puis choisissez AUTO, le mode recommandé.",
-    lw3: "Appuyez sur START pour lancer le séchage. Retirez le linge après la fin du cycle et le déverrouillage."
-  },
-  es: {
-    backToMenu: "← Volver al menú",
-    s1: "Lavadora",
-    s2: "Secadora",
-    lw1: "Ponga el detergente en el compartimento trasero y el suavizante en el compartimento delantero. Después de elegir el programa, pulse START/PAUSE.",
-    lw2: "Encienda con POWER y normalmente use AUTO, que es el ajuste recomendado.",
-    lw3: "Pulse START para comenzar el secado. Saque la ropa cuando termine el ciclo y se desbloquee la máquina."
-  }
-};
 
-function setLang(lang, btn) {
-  document.querySelectorAll(".lang-btn").forEach((b) => b.classList.remove("active"));
-  btn.classList.add("active");
-  const dict = S[lang];
-  if (!dict) return;
-  document.querySelectorAll("[data-i18n]").forEach((el) => {
-    const key = el.getAttribute("data-i18n");
-    if (key in dict) el.textContent = dict[key];
-  });
-}
-
-setLang("en", document.querySelector(".lang-btn.active"));
-</script>
   <script src="../assets/cute-pack.js" defer></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,46 +29,37 @@
   .back-footer a:hover{opacity:0.8;}
 </style>
   <link rel="stylesheet" href="../assets/cute-pack.css">
+  <link rel="stylesheet" href="../assets/i18n.css">
+  <script src="../assets/i18n.js"></script>
 </head>
 <body>
-<div class="lang-bar">
-  <button class="lang-btn active" onclick="setLang('en',this)">&#x1F1EC;&#x1F1E7; EN</button>
-  <button class="lang-btn" onclick="setLang('ja',this)">&#x1F1EF;&#x1F1F5; JA</button>
-  <button class="lang-btn" onclick="setLang('zh',this)">&#x1F1E8;&#x1F1F3; ZH</button>
-  <button class="lang-btn" onclick="setLang('ko',this)">&#x1F1F0;&#x1F1F7; KO</button>
-  <button class="lang-btn" onclick="setLang('fr',this)">&#x1F1EB;&#x1F1F7; FR</button>
-  <button class="lang-btn" onclick="setLang('es',this)">&#x1F1EA;&#x1F1F8; ES</button>
+<div class="lang-bar" aria-label="Language">
+  <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+  <button type="button" class="lang-btn" data-lang="ja" aria-pressed="false">日本語</button>
+  <button type="button" class="lang-btn" data-lang="zh" aria-pressed="false">中文</button>
+  <button type="button" class="lang-btn" data-lang="ko" aria-pressed="false">한국어</button>
+  <button type="button" class="lang-btn" data-lang="fr" aria-pressed="false">Français</button>
+  <button type="button" class="lang-btn" data-lang="es" aria-pressed="false">Español</button>
 </div>
 <div class="top-bar">
   <a href="../" class="back-btn">&#x2190;</a>
   <span class="top-emoji">&#x1F511;</span>
-  <div class="top-title" data-i18n="pageTitle">How to Open</div>
+  <div class="top-title" data-i18n="pageTitle"><span class="lang lang-en">How to Open</span><span class="lang lang-ja">入室方法</span><span class="lang lang-zh">如何开门</span><span class="lang lang-ko">입실 방법</span><span class="lang lang-fr">Comment entrer</span><span class="lang lang-es">Cómo entrar</span></div>
 </div>
 <div class="content">
   <div class="notice-card">
     <span class="notice-icon">&#x1F4CB;</span>
-    <div class="notice-title" data-i18n="cardTitle">Check-in Information</div>
+    <div class="notice-title" data-i18n="cardTitle"><span class="lang lang-en">Check-in Information</span><span class="lang lang-ja">チェックイン情報について</span><span class="lang lang-zh">入住信息</span><span class="lang lang-ko">체크인 안내</span><span class="lang lang-fr">Informations d'arrivée</span><span class="lang lang-es">Información de entrada</span></div>
     <div class="notice-body">
-      <span data-i18n="cardBody">The check-in instructions including door codes and key box information will be sent to you after we receive your guest registration form.</span>
-      <strong data-i18n="cardSub">Please complete the registration form sent to you before your arrival 😊</strong>
+      <span data-i18n="cardBody"><span class="lang lang-en">The check-in instructions including door codes and key box information will be sent to you after we receive your guest registration form.</span><span class="lang lang-ja">宿泊者名簿のご提出後に、ドアコードやキーボックスの情報を含むチェックイン案内をお送りさせていただいています。</span><span class="lang lang-zh">收到您提交的住客登记表后，我们将向您发送包含门锁密码和钥匙盒信息在内的入住说明。</span><span class="lang lang-ko">숙박자 명부를 제출해 주신 후, 도어 코드 및 키박스 정보를 포함한 체크인 안내를 보내드립니다.</span><span class="lang lang-fr">Les instructions d'arrivée incluant le code de la porte et les informations de la boîte à clés vous seront envoyées après réception de votre formulaire d'enregistrement.</span><span class="lang lang-es">Las instrucciones de entrada, incluyendo los códigos de la puerta y la caja de llaves, se le enviarán tras recibir su formulario de registro de huéspedes.</span></span>
+      <strong data-i18n="cardSub"><span class="lang lang-en">Please complete the registration form sent to you before your arrival 😊</span><span class="lang lang-ja">ご到着前に、お送りした宿泊者名簿フォームのご記入をお願いいたします 😊</span><span class="lang lang-zh">请在抵达前填写我们发送给您的住客登记表 😊</span><span class="lang lang-ko">도착 전에 보내드린 숙박자 등록 양식을 작성해 주세요 😊</span><span class="lang lang-fr">Veuillez remplir le formulaire d'enregistrement envoyé avant votre arrivée 😊</span><span class="lang lang-es">Por favor complete el formulario de registro enviado antes de su llegada 😊</span></strong>
     </div>
   </div>
   <div class="back-footer">
-    <a href="../" data-i18n="backToMenu">&#x2190; Back to Menu</a>
+    <a href="../" data-i18n="backToMenu"><span class="lang lang-en">← Back to Menu</span><span class="lang lang-ja">← メニューに戻る</span><span class="lang lang-zh">← 返回菜单</span><span class="lang lang-ko">← 메뉴로 돌아가기</span><span class="lang lang-fr">← Retour au menu</span><span class="lang lang-es">← Volver al menú</span></a>
   </div>
 </div>
-<script>
-const S={
-  en:{pageTitle:"How to Open",cardTitle:"Check-in Information",cardBody:"The check-in instructions including door codes and key box information will be sent to you after we receive your guest registration form.",cardSub:"Please complete the registration form sent to you before your arrival 😊",backToMenu:"← Back to Menu"},
-  ja:{pageTitle:"入室方法",cardTitle:"チェックイン情報について",cardBody:"宿泊者名簿のご提出後に、ドアコードやキーボックスの情報を含むチェックイン案内をお送りさせていただいています。",cardSub:"ご到着前に、お送りした宿泊者名簿フォームのご記入をお願いいたします 😊",backToMenu:"← メニューに戻る"},
-  zh:{pageTitle:"入室方法",cardTitle:"入住信息",cardBody:"收到您提交的住客登记表后，我们将向您发送包含门锁密码和鑰匙筹信息在内的入住说明。",cardSub:"请在択达前填写我们发送给您的住客登记表 😊",backToMenu:"← 返回菜单"},
-  ko:{pageTitle:"입실 방법",cardTitle:"체크인 안내",cardBody:"숨박자 명부를 제출해 주신 후, 도어 코드 및 키박스 정보를 포함한 체크인 안내를 보내드립니다.",cardSub:"도착 전에 보내드린 숨박자 등록 양식을 작성해 주세요 😊",backToMenu:"← 메뉴로 돌아가기"},
-  fr:{pageTitle:"Comment entrer",cardTitle:"Informations d'arrivée",cardBody:"Les instructions d'arrivée incluant le code de la porte et les informations du boîter à clés vous seront envoyées après réception de votre formulaire d'enregistrement.",cardSub:"Veuillez remplir le formulaire d'enregistrement envoyé avant votre arrivée 😊",backToMenu:"← Retour au menu"},
-  es:{pageTitle:"Cómo entrar",cardTitle:"Información de entrada",cardBody:"Las instrucciones de entrada, incluyendo los códigos de la puerta y la caja de llaves, se le enviarán tras recibir su formulario de registro de huéspedes.",cardSub:"Por favor complete el formulario de registro enviado antes de su llegada 😊",backToMenu:"← Volver al menú"}
-};
-function setLang(l,btn){document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');const t=S[l];if(!t)return;document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.getAttribute('data-i18n');if(k in t)el.textContent=t[k];});}
-setLang('en',document.querySelector('.lang-btn.active'));
-</script>
+
   <script src="../assets/cute-pack.js" defer></script>
 </body>
 </html>
